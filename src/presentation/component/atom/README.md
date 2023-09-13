@@ -1,0 +1,1 @@
+Atom directory berisi components paling kecil seperti button, input text, burger nemu dst

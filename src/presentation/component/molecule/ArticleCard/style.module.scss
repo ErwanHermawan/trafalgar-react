@@ -1,0 +1,92 @@
+@import "core/style/_asset.scss";
+
+.card {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: color(white);
+  @include shadow(50);
+  &:hover {
+    .image {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    .text {
+      .title {
+        color: color(primary, 1);
+      }
+      .btn-forward {
+        i {
+          transform: translateX(8px);
+        }
+      }
+    }
+  }
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  z-index: 2;
+}
+
+.image {
+  padding-bottom: 68.575%;
+  position: relative;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all .3s ease;
+  }
+}
+
+.text {
+  padding: 24px 24px 96px;
+  min-height: 248px;
+  @include small {
+    padding-bottom: 80px;
+  }
+}
+
+.title {
+  @include font-size(20);
+  font-weight: fw(700);
+  color: color(black);
+  margin-bottom: 16px;
+  @include multiline-ellipsis(2);
+  transition: all 350ms ease;
+  @include small {
+    @include font-size(18);
+  }
+}
+
+.desc {
+  color: color(grey);
+  font-weight: fw(300);
+  margin-bottom: 0;
+  @include multiline-ellipsis(3);
+}
+
+.button {
+  position: absolute;
+  bottom: 32px;
+  left: 24px;
+  @include small {
+    left: 16px;
+    bottom: 24px;
+  }
+}
+  

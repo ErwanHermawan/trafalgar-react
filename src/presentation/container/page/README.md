@@ -1,0 +1,1 @@
+Page directory berisi components yang berisi pages seperti home, login, product dst

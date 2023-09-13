@@ -1,0 +1,1 @@
+Organism directory berisi components yang berisi section seperti header, footer, banner carousel, section product dst

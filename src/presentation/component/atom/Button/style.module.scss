@@ -1,0 +1,55 @@
+@import "core/style/_asset.scss";
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 200px;
+  padding: 14px 40px;
+  border-radius: 55px;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid transparent;
+  @include font-size(16);
+  background-color: transparent;
+  @include remove-tap-highlight;
+  transition: all 350ms ease;
+  font-weight: fw(bold);
+  &Primary {
+    background-color: color(primary, 1);
+    color: color(white);
+    &:hover {
+      background-color: transparent;
+      color: color(primary, 1);
+      border-color: color(primary, 1);
+    }
+  }
+  &Secondary {
+    background-color: transparent;
+    color: color(primary, 1);
+    border-color: color(primary, 1);
+    &:hover {
+      background-color: color(primary, 1);
+      color: color(white);
+    }
+  }
+  i {
+    display: inline-block;
+    margin-left: 14px;
+    animation: bounce 1.6s ease-in-out .1s infinite alternate;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+}
