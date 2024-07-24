@@ -16,16 +16,20 @@ import testimonyData from "./testimonyData";
 import articleData from "./articleData";
 
 const Home = () => {
-  return (
-    <Default activeMenu="home">
-      <HeroBanner data={bannerData} />
-      <SectionService data={serviceData} />
-      <SectionDescription data={descriptionData.data1} />
-      <SectionDescription data={descriptionData.data2} reverse={true} icon="arrow-down" />
-      <SectionTestimony data={testimonyData} />
-      <SectionArticle data={articleData} />
-    </Default>
-  );
+	return (
+		<Default activeMenu="Home">
+			<HeroBanner data={bannerData} />
+			<SectionService data={serviceData} />
+			<SectionDescription data={descriptionData.data1} />
+			<SectionDescription
+				data={descriptionData.data2}
+				reverse={true}
+				icon="arrow-down"
+			/>
+			<SectionTestimony data={testimonyData} />
+			<SectionArticle data={articleData} />
+		</Default>
+	);
 };
 
 export default Home;
